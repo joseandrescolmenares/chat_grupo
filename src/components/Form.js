@@ -19,7 +19,7 @@ const handleOnsubmit = (e) => {
     <div className={s.container}>
     <h1 className={s.h1}>Master chat</h1>
     <form className={s.form} onSubmit={handleOnsubmit}> 
-         <label >Ingrese su Nombre</label>
+         <label >Ingrese su nombre</label>
         <input className={s.input} placeholder='Nombre'  value={name}  type='text' minLength='4' required  onChange={(e) => setName(e.target.value)}></input>
         <button className={s.boton}>Registrar</button>
         </form>

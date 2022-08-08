@@ -26,6 +26,7 @@ h1{
     border-radius: 10px;
     border-style:dashed;
     outline: none;
+    padding: 5px;
 }
 
 .input:focus{
@@ -42,3 +43,4 @@ h1{
    border:1px solid #8a8a8d;
    color: #fff;
 }
+
