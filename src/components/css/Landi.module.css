@@ -1,0 +1,56 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1300px;
+  height:800px;
+
+  
+}
+.izquierdo {
+  
+  height: 100%;
+  width: 55%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  border-radius: 40px 0px 0px 40px;
+  background-color: rgb(255, 254, 254);
+
+}
+
+.derecho {
+  width: 55%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #4163e3;
+  
+}
+
+.img{
+    display: flex;
+    align-items:  start;
+    height: 50%;
+    width: 100%;
+    
+}
+
+.proba{
+    width:100%;
+    height:430px;
+    border-radius:0px 40px 0px 0px ;
+}
+
+.explicacion{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:50%;
+    color: #fff;
+}
