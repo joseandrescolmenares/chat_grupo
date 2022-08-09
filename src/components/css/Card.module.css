@@ -1,6 +1,75 @@
 .card{
+    display: flex;
     width:90%;
     height:100px;
-    background-color: aliceblue;
+    background-color: rgb(223, 224, 224);
+    opacity: 0.7;
     margin:20px;
+}
+.perfil{
+    width:90%;
+    display: flex;
+}
+.nombre{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+    
+}
+.titulo{
+    margin: 0%;
+}
+.conec{
+    margin: 0%;
+}
+
+.img{
+    width:55px;
+    height:60px;
+    margin:20px;
+    border-radius: 20px;
+}
+
+.boton{
+    width:150px;
+    height:100px;
+    margin:5px;
+    border-radius: 50%;
+}
+
+.agra{
+    width:20px;
+    height:20px;
+    cursor: pointer;
+}
+.conte{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 20px;
+}
+.contenedorModal{
+display: flex;
+justify-content:center;
+align-items:center;
+flex-wrap: wrap;
+background-color: #fff;
+width:650px;
+height:550px;
+border-radius:20px;
+}
+
+.modalito{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.cerra{
+    width:90px;
+    height:40px;
+    cursor: pointer;
+    margin-left: 100px;
 }

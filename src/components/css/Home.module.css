@@ -10,12 +10,15 @@ align-items:center;
 .izquierdo{
     width:50%;
     height:90%;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
+    overflow-x:hidden;
+   scroll-behavior:inherit;
     
 }
 
 .derecho{
     width:80%;
+    max-width: 740px;
     height:90%;
     display: flex;
     justify-content:end;
@@ -32,5 +35,20 @@ border:none;
 
 
 .mensaje{
+    width:100%;
     background-color: #fff;
+}
+
+.envio{
+    width:100%;
+     margin:20px;
+    overflow-x:hidden;
+   overflow-wrap:break-word;
+   scroll-behavior:inherit;
+ 
+}
+
+.h1{
+    padding:20px;
+    color:rgb(19, 18, 18);
 }

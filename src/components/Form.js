@@ -8,14 +8,16 @@ const [name, setName] = useState('')
 let navigate = useNavigate();
 const handleOnsubmit = (e) => {
     e.preventDefault()
-    socket.emit('conectado', name)
-
-   setTimeout(() =>{
     navigate("/home")
-   },1500)
+   setTimeout(() =>{
+    socket.emit('conectado', name)
+   },2000)
    
 }
+
+
  return(
+   
     <div className={s.container}>
     <h1 className={s.h1}>Master chat</h1>
     <form className={s.form} onSubmit={handleOnsubmit}> 
