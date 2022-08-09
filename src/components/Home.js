@@ -12,8 +12,9 @@ const Home = () => {
 
 
   useEffect(() => {
-    socket.on("nombre", (name) => {
-      setNombres([...nombres, name]);
+    socket.on("nombre", (algo) => {
+      console.log(algo)
+      setNombres([...nombres, algo]);
       
       return () => {
         socket.off();
@@ -43,8 +44,8 @@ const Home = () => {
     <>
       <div className={s.container}>
         <div className={s.izquierdo}>
-          {nombres.map((el) => (
-            <Card nombre={el.name} />
+          {nombres.map((el, i) => (
+            <Card key={i} nombre={el.name} img={el.imagenes}/>
           ))}
         </div>
         <div className={s.derecho}>
@@ -63,7 +64,6 @@ const Home = () => {
               onChange={(e) => setEnvio(e.target.value)}
             />{" "}
             <button onClick={handleMensaje}>enviar</button>
-            <button>avatar</button>
           </div>
         </div>
           
