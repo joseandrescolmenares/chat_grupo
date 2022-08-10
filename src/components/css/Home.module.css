@@ -5,17 +5,18 @@ height:100vh;
 display: flex;
 justify-content:center;
 align-items:center;
+
 }
 
 .izquierdo{
     width:50%;
     height:90%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(37, 103, 189);
     overflow-x:hidden;
    scroll-behavior:inherit;
    border:1px solid rgb(197, 197, 197);
    border-radius: 20px 0px 0px 20px;
-    
+   
 }
 
 .derecho{
@@ -29,12 +30,14 @@ align-items:center;
     background-color:rgb(247, 244, 244);
     border:1px solid rgb(197, 197, 197);
     border-radius: 0px 30px 20px 10px;
+  
 }
 
 .input{
-width:672px;
+width:85%;
 height:80px;
 border:none;
+padding-left:20px;
 }
 
 
@@ -51,9 +54,18 @@ border:none;
    overflow-wrap:break-word;
    scroll-behavior:inherit;
    background-color: rgb(235, 234, 236);
-   opacity: 0.4;
+   opacity: 0.6;
    border-radius: 0px 20px 0px 0px;
  
+}
+.izquierdo::-webkit-scrollbar{
+    width:7px;
+    background-color:rgb(255, 255, 255);;
+}
+.izquierdo::-webkit-scrollbar-thumb{
+    background: rgb(174, 185, 206);
+    border-radius: 10px;
+   
 }
 
 .envio::-webkit-scrollbar{

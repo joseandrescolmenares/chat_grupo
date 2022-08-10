@@ -1,5 +1,5 @@
 import io from 'socket.io-client'
 
-let socket = io("https://grupo-chat.herokuapp.com/")
+let socket = io("http://localhost:3001/")
 
 export default socket

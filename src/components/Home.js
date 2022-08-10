@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import socket from "./Socket";
 import s from "./css/Home.module.css";
 import Card from "./Card";
+import { useSelector} from "react-redux";
+import Mensajes from "./Mensaje";
 
 const Home = () => {
  
   const [nombres, setNombres] = useState([]);
   const [envio, setEnvio] = useState("");
   const [mensaje, setMensaje] = useState([]);
-  
-
+  const divRef = useRef(null)
+  const stadoNombre = useSelector((state) =>  state.nombre)
+  const stadoImg = useSelector((state) => state.img)
 
   useEffect(() => {
     socket.on("nombre", (algo) => {
@@ -23,7 +26,8 @@ const Home = () => {
   }, [nombres]);
 
   const handleMensaje = () => {
-    socket.emit("mensaje", envio);
+    socket.emit("mensaje", stadoImg, stadoNombre, envio);
+    setEnvio('')
   };
 
   useEffect(() => {
@@ -37,6 +41,26 @@ const Home = () => {
   }, [mensaje]);
 
 
+useEffect(() => {
+  socket.emit('pendiete', "listo")
+ socket.emit("cargarMensaje", "listo")
+ socket.on('ouput-mensaje', (msg) => {
+  setMensaje(msg)
+})
+},[])
+
+useEffect(() => {
+ socket.on('enviadoUser', (user) => {
+     setNombres(user)
+     return () => {
+      socket.off();
+    };
+ })
+},[nombres])
+
+useEffect(() => {
+  divRef.current.scrollIntoView({behavior: 'smooth'});
+})
 
 
 
@@ -50,9 +74,11 @@ const Home = () => {
         </div>
         <div className={s.derecho}>
           <div className={s.envio}> 
-          {mensaje.map((el) => (
-            <h1 className={s.h1}>{el.envio}</h1>
+          {mensaje.map((el, i) => (
+            <Mensajes key={i} msg={el.msg} name={el.name} img={el.img}/>
+            
           ))}
+          <div ref={divRef}></div>
           </div>
           <div className={s.mensaje}>
             <input

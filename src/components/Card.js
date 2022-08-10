@@ -9,10 +9,10 @@ const Card = ({ nombre, img}) => {
         <img className={s.img} src={img} alt='icono'/>
         <div className={s.nombre}>
           <h1 className={s.titulo}>{nombre}</h1>
-          <p className={s.conec}>conectado</p>
+          <p className={s.conec}>se conecto</p>
         </div>
       </div>
-      <p>🔵</p>
+      <p className={s.conecto}>🔵</p>
       
     </div>
   );

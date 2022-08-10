@@ -3,10 +3,15 @@ import s from './css/Form.module.css'
 import socket from './Socket'
 import { Modal } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
+import { useDispatch} from "react-redux";
+import {getNombre, getImg} from './redux/actions'
 const Form = () => {
 const [name, setName] = useState('')
 const [modal, setModal] = useState(false);
 const [imagenes, setImg] = useState("");
+
+const dispatch = useDispatch()
+
 console.log(imagenes)
 const abrirmodal = () => {
    setModal(!modal);
@@ -22,8 +27,10 @@ const handleOnsubmit = (e) => {
 const handleEnviar = () => {
    navigate("/home")
    setTimeout(() =>{
+    dispatch(getNombre(name))
+    dispatch(getImg(imagenes))
     socket.emit('conectado', imagenes,name)
-   },2000)
+   },1500)
 }
 
 

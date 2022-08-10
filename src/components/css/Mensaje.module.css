@@ -1,0 +1,24 @@
+.container{
+    background-color: rgba(13, 114, 230, 0.61);
+    width:100%;
+    height:auto;
+    margin:10px;
+    display:flex;
+}
+
+.img{
+ width:80px;
+ height:90px;
+ border-radius:100%;
+}
+
+.msj{
+    display: flex;
+    width:40%;
+}
+.mensaje{
+    margin-left: 30px;
+    width:60%;
+    background-color: rgb(255, 255, 255);
+    
+}
