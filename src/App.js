@@ -1,14 +1,22 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import { Routes, Route } from "react-router-dom";
 import  Landi from './components/Landi'
 import Home from "./components/Home"
 function App() {
-const rutapri = window.localStorage.getItem('name')
+const [estado, setStado] = useState(false)
 
-console.log(rutapri)
+  useEffect(() => {
+    const rutapri = window.localStorage.getItem('name')
+    if(rutapri) {
+      setStado(true)
+    }
+  },[])
+
+
+
   return <Routes>
       <Route  path="/" element={<Landi/>}/>
-      <Route path="/home" element={rutapri ? <Home/>: <div>No puede acceder sin un Nombre</div>}/>
+      <Route path="/home" element={estado ? <Home/>: <div>No puede acceder sin un Nombre</div>}/>
   </Routes>;
 }
 

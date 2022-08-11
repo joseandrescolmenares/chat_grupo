@@ -24,7 +24,7 @@ const handleOnsubmit = (e) => {
 }
 
 const handleEnviar = () => {
-  
+  navigate("/home")
    window.localStorage.setItem('ruta','fun')
    socket.emit('resultado', imagenes,name)
 
@@ -34,7 +34,7 @@ const handleEnviar = () => {
     window.localStorage.setItem('img', result.imagenes)
     setTimeout(()=>{
     // socket.emit('conectado' , imagenes, name)
-    navigate("/home")
+   
     },2000)
   })
  
