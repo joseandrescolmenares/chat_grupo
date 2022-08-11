@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import s from './css/Form.module.css'
 import socket from './Socket'
 import { Modal } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
-import { useDispatch} from "react-redux";
-import {getNombre, getImg} from './redux/actions'
+import {privado} from './redux/actions'
 const Form = () => {
 const [name, setName] = useState('')
 const [modal, setModal] = useState(false);
 const [imagenes, setImg] = useState("");
+// const dispatch = useDispatch()
+// const rutapriv = useSelector((state) => state.privado)
 
-const dispatch = useDispatch()
 
-console.log(imagenes)
 const abrirmodal = () => {
    setModal(!modal);
  };
@@ -26,11 +25,18 @@ const handleOnsubmit = (e) => {
 
 const handleEnviar = () => {
    navigate("/home")
-   setTimeout(() =>{
-    dispatch(getNombre(name))
-    dispatch(getImg(imagenes))
-    socket.emit('conectado', imagenes,name)
-   },1500)
+   window.localStorage.setItem('ruta','fun')
+   socket.emit('resultado', imagenes,name)
+
+   socket.on('envioResultado', ({result}) =>{
+    window.localStorage.setItem('name', result.name)
+    window.localStorage.setItem('id', result._id)
+    window.localStorage.setItem('img', result.imagenes)
+    setTimeout(()=>{
+    // socket.emit('conectado' , imagenes, name)
+    },2000)
+  })
+ 
 }
 
 

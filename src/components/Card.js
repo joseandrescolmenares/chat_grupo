@@ -12,7 +12,7 @@ const Card = ({ nombre, img}) => {
           <p className={s.conec}>se conecto</p>
         </div>
       </div>
-      <p className={s.conecto}>🔵</p>
+      <p className={s.conecto}>🟢</p>
       
     </div>
   );

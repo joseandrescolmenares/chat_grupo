@@ -1,6 +1,5 @@
 const stateInitial = {
-    nombre: '',
-    img: ''
+  privado : false,
    };
    
    
@@ -18,6 +17,12 @@ const stateInitial = {
               ...state,
               img: action.payload
             }
+
+            case 'PRIVATE':
+              return {
+                ...state,
+                privado: true
+              }
            
        default:
          return state;

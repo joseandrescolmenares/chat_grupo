@@ -13,7 +13,7 @@ const Landi = () => {
         <div className={s.img}>
           <img className={s.proba} src={logo} />
         </div>
-        <div className={s.explicacion}><p>Lorem ipsum dolor sit amet, consectetur</p></div>
+        <div className={s.explicacion}><p>Este chat es un proyecto que hice para reforzar conocimiento.<br/> espero que te guste 🤗🙌<hr></hr> </p></div>
       </div>
     </div>
   );

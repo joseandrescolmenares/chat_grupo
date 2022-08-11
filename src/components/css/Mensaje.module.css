@@ -1,24 +1,53 @@
 .container{
-    background-color: rgba(13, 114, 230, 0.61);
-    width:100%;
+    background-color: rgba(13, 115, 233, 0.61);
     height:auto;
-    margin:10px;
+    margin:20px;
     display:flex;
+   border-radius:20px;
+   margin-right: 20px ;
 }
 
 .img{
- width:80px;
- height:90px;
+ width:40px;
+ height:40px;
  border-radius:100%;
+ margin:10px;
 }
 
 .msj{
-    display: flex;
-    width:40%;
+display: flex;
+ align-items:center;
+width:50%;
+
+
+
+
 }
 .mensaje{
     margin-left: 30px;
-    width:60%;
+    width:100%;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px;
+    border-radius: 20px;
     
+}
+
+.mio{
+    background-color:rgb(111, 51, 167);
+    display: flex;
+    flex-direction: row-reverse;
+    margin:20px;
+    height:auto;
+    border-radius:20px;
+}
+
+.h2{
+    color: rgb(17, 16, 16);
+    font-size:1rem;
+}
+.name{
+    color: rgb(0, 0, 0);
 }

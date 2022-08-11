@@ -20,14 +20,17 @@
 }
 .titulo{
     margin: 0%;
+    text-transform: capitalize;
 }
 .conec{
     margin: 0%;
+    align-self: flex-start;
+    color:rgb(14, 158, 79);
 }
 
 .img{
-    width:55px;
-    height:60px;
+    width:35px;
+    height:40px;
     margin:20px;
     border-radius: 20px;
 }

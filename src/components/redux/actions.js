@@ -16,3 +16,9 @@ export function getImg(img){
     payload: img
     }
 }
+
+export function privado(){
+  return{
+    type:'PRIVATE',
+  }
+}
